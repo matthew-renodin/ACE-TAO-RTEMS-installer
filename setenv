@@ -1,0 +1,5 @@
+
+export ACE_ROOT=${PWD}/ACE_TAO/ACE
+export TAO_ROOT=${PWD}/ACE_TAO/TAO
+export MPC_ROOT=${PWD}/MPC
+export RTEMS_MAKEFILE_PATH=/home/matthew/development/rtems/kernel/xilinx-zynq-qemu/arm-rtems5/c/xilinx_zynq_a9_qemu
