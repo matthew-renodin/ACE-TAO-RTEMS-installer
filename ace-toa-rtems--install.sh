@@ -16,6 +16,8 @@
 	
 	#cp platform_mingw32.GNU ACE_TAO/ACE/include/makeinclude/
 	cp platform_macros.GNU ACE_TAO/ACE/include/makeinclude/
+	cp macros.GNU ACE_TAO/ACE/include/makeinclude
+	cp platform_rtems.x_g++.GNU ACE_TAO/ACE/include/makeinclude/
 	cp config.h ACE_TAO/ACE/ace
 	cp rTAO.mwc ACE_TAO/TAO
 

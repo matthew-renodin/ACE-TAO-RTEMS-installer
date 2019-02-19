@@ -2,4 +2,10 @@
 export ACE_ROOT=${PWD}/ACE_TAO/ACE
 export TAO_ROOT=${PWD}/ACE_TAO/TAO
 export MPC_ROOT=${PWD}/MPC
-export RTEMS_MAKEFILE_PATH=/home/matthew/development/rtems/kernel/xilinx-zynq-qemu/arm-rtems5/c/xilinx_zynq_a9_qemu
+export RTEMS_KERNEL=/opt/rtems/kernel/xilinx-zynq-qemu
+export RTEMS_MAKEFILE_PATH=${RTEMS_KERNEL}/arm-rtems5/c/xilinx_zynq_a9_qemu
+export RTEMS_PATH=/opt/rtems/5/arm-rtems5
+export PATH=/mingw32/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rtems/5/bin:/mingw64/bin
+export LD_LIBRARY_PATH=/lib:/home/mrenodin/projects/ACE-TAO-mingw32-installer/ACE_TAO/ACE/lib/
+export BSP=xilinx-zynq
+export ARCH=arm
