@@ -23,7 +23,11 @@ cd ACE-TAO-RTEMS-installer
     1. setenv 
     2. platform_macros.GNU
     
-3. In the ACE-TAO-mingw-installer project the tao_idl.exe 
+3. In the ACE-TAO-mingw-installer project the tao_idl.exe needs to be moved to mtao_idl. Then copy the tao_idl_helper as tao_idl to the ACE-TAO-mingw-installer project. There is an issue with exe requiring DLLs that probably need to be installed. the tao_idl_helper has
+    
+4. 
+
+
 
     
     
