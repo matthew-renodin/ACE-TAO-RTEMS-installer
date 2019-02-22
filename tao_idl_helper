@@ -1,0 +1,15 @@
+#export LD_LIBRARY_PATH=/lib
+
+
+#echo "$@"
+cp $HOST_ACE_ROOT/lib/libACE.dll .
+cp $HOST_ACE_ROOT/lib/libTAO_IDL_BE.dll .
+cp $HOST_ACE_ROOT/lib/libTAO_IDL_FE.dll .
+
+$HOST_ACE_ROOT/bin/mtao_idl $@
+
+rm libACE.dll
+rm libTAO_IDL_BE.dll
+rm libTAO_IDL_FE.dll
+
+
