@@ -23,9 +23,11 @@ cd ACE-TAO-RTEMS-installer
     1. setenv 
     2. platform_macros.GNU
     
-3. In the ACE-TAO-mingw-installer project the tao_idl.exe needs to be moved to mtao_idl. Then copy the tao_idl_helper as tao_idl to the ACE-TAO-mingw-installer project. There is an issue with exe requiring DLLs that probably need to be installed. the tao_idl_helper has
+3. In the ACE-TAO-mingw-installer project the tao_idl.exe needs to be moved to mtao_idl. Then copy the tao_idl_helper as tao_idl to the ACE-TAO-mingw-installer project. There is an issue with exe requiring DLLs in thecurrent working directory. There is likely a fix for this issue, but it needs to be dealt with in the ACE TAO project. Also, I tried using the platform_macros.GNU but it did not execute the program I specified as expected. I am likley using the wrong variable.
     
-4. 
+4. Once you have accomplished the previous steps and have reviewed the files, execute the ace-tao--rtems-install.sh
+
+./ace-tao--rtems-install.sh
 
 
 
