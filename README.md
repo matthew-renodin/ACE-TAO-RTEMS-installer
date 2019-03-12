@@ -31,13 +31,13 @@ cd rtems
 
 ../source-builder/sb-set-builder --prefix=/opt/rtems/tools 5/rtems-arm 
 
-export PATH=/opt/rttms/tools/bin:$PATH
+export PATH=/opt/rtems/tools/bin:$PATH
 
 cd /opt/rtems
 
-git clone git://git.rtems.org/rtems.git rtems
+git clone git://git.rtems.org/rtems.git kernel
 
-cd rtems
+cd kernel
 
 ./bootstrap -c && ../../rsb/source-builder/sb-bootstrap
 
@@ -47,7 +47,7 @@ mkdir xilinx-zynq-qemu
 
 cd xilinx-zynq-qemu
 
-../rtems/configure --prefix=/opt/rtems/bsp --target=arm-rtems5 --enable-rtemsbsp=xilinx_zynq_a9_qemu --enable-posix 
+../kernel/configure --prefix=/opt/rtems/bsp --target=arm-rtems5 --enable-rtemsbsp=xilinx_zynq_a9_qemu --enable-posix 
 
 make
 
