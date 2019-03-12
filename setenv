@@ -6,8 +6,9 @@ export RTEMS_KERNEL=/opt/rtems/xilinx-zynq-qemu
 export RTEMS_MAKEFILE_PATH=${RTEMS_KERNEL}/arm-rtems5/c/xilinx_zynq_a9_qemu
 export RTEMS_PATH=/opt/rtems/bsp/arm-rtems5
 export PATH=/mingw32/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rtems/tools/bin:/mingw64/bin
-export LD_LIBRARY_PATH=/lib:${HOME}/projects/ACE-TAO-mingw-installer/ACE_TAO/ACE/lib/
+export HOST_ACE_ROOT=${HOME}/projects/ACE-TAO-mingw-installer/ACE_TAO/ACE
+export LD_LIBRARY_PATH=/lib:${HOST_ACE_ROOT}/lib/
 export BSP=xilinx-zynq
 export ARCH=arm
-export HOST_ACE_ROOT=${HOME}/projects/ACE-TAO-mingw-installer/ACE_TAO/ACE/
+
 
