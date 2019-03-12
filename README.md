@@ -2,7 +2,7 @@
 
 This is an installer/builder for ACE-TAO for RTEMS 5.
 
-You will need to build RTEMS under MINGW first. You must build RTEMS under the MINGW32 or set the environment, this goes for ACE and TAO as well.
+You will need to build RTEMS under MINGW first. You must build RTEMS under the MINGW32 or set the environment variable, this goes for ACE and TAO as well.
 
 ## Setting up MINGW
 
