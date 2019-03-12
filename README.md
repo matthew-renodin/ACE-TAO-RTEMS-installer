@@ -4,7 +4,7 @@ This is an installer/builder for ACE-TAO for RTEMS 5.
 
 You will need to build RTEMS under MINGW first. You must build RTEMS under the MINGW32 or set the environment, this goes for ACE and TAO as well.
 
-# Setting up MINGW
+## Setting up MINGW
 
 pacman -S python mingw-w64-x86_64-python2 mingw-w64-x86_64-gcc bison cvs diffutils git make patch tar texinfo unzip
 pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain
