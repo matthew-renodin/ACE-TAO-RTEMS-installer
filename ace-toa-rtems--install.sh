@@ -23,6 +23,7 @@
 	cp rTAO.mwc ACE_TAO/TAO
 	cp mACE.mwc ACE_TAO/ACE
 	cp OS_NS_unistd.inl ACE_TAO/ACE/ace
+	cp tao_idl_helper $HOST_ACE_ROOT/bin
 
 	cd ACE_TAO 
 
