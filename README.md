@@ -6,7 +6,7 @@ You will need to build RTEMS under MINGW first. You must build RTEMS under the M
 
 You may run into issues trying to compile RTEMS under the MINGW32. 
 
-## Important Setting up MINGW
+## Important steps for setting up MINGW
 
 These are required to compile ACE and TAO for RTEMS under MINGW64.
 
