@@ -39,7 +39,7 @@ ifeq (no,$(RTEMS_HAS_NETWORKING))
 endif
 
 
-CPPFLAGS += -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard -mtune=cortex-a9 -O0 -g -ffunction-sections -fdata-sections -Wall -B$(RTEMS_MAKEFILE_PATH)/lib/libbsp/$(ARCH)/$(BSP) -B$(RTEMS_KERNEL)/bsps/$(ARCH)/$(BSP)/start -B$(RTEMS_KERNEL)/bsps/$(ARCH)/shared/start/ -specs bsp_specs -qrtems -fpermissive -Wl,--wrap=printf -Wl,--wrap=puts -Wl,--wrap=putchar -Wl,--gc-sections -Wl,--allow-multiple-definition -Wl,-Ttext,0x00100000 -DACE_HAS_CUSTOM_EXPORT_MACROS=0 -fPIC -fno-builtin -fno-defer-pop -fpermissive -DACE_HAS_RTEMS 
+CPPFLAGS += -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard -mtune=cortex-a9 -O0 -g -ffunction-sections -fdata-sections -Wall -B$(RTEMS_MAKEFILE_PATH)/lib/libbsp/$(ARCH)/$(BSP) -B$(RTEMS_KERNEL)/bsps/$(ARCH)/$(BSP)/start -B$(RTEMS_KERNEL)/bsps/$(ARCH)/shared/start/ -specs bsp_specs -qrtems -fpermissive -Wl,--wrap=printf -Wl,--wrap=puts -Wl,--wrap=putchar -Wl,--gc-sections -Wl,--allow-multiple-definition -DACE_HAS_CUSTOM_EXPORT_MACROS=0 -fPIC -fno-builtin -fno-defer-pop -fpermissive -DACE_HAS_RTEMS 
 DCFLAGS         += -g
 DCCFLAGS        += -g
 DLD             = $(LD)
