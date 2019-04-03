@@ -16,14 +16,6 @@ pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchai
 
 
 
-## Set PATH
-
-This may be an unnecessary step to build RTEMS. 
-
-export PATH=/mingw32/bin:$PATH
-
-
-
 ## Build RTEMS
 
 cd /opt
@@ -66,6 +58,10 @@ make
 make install
 
 
+
+## Set PATH
+
+export PATH=/mingw32/bin:$PATH
 
 
 ## Build Host ACE-TAO on MINGW
