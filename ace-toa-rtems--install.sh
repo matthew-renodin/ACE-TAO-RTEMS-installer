@@ -24,13 +24,20 @@
 	cp mACE.mwc ACE_TAO/ACE
 	cp OS_NS_unistd.inl ACE_TAO/ACE/ace
 	cp tao_idl_helper $HOST_ACE_ROOT/bin
+	cp WAF-Rtems_init.c ACE_TAO/ACE/ace/Rtems_init.c
+
+	source config.inc
+	sed -e 's/@NET_CFG_SELF_IP@/'$NET_CFG_SELF_IP'/' -e 's/@NET_CFG_NETMASK@/'$NET_CFG_NETMASK'/' -e 's/@NET_CFG_PEER_IP@/'$NET_CFG_PEER_IP'/' -e 's/@NET_CFG_GATEWAY_IP@/'$NET_CFG_GATEWAY_IP'/'  < waf/network-config.h.in > waf/network-config.h
+
+	cp -R waf ACE_TAO/ACE 
+
 
 	cd ACE_TAO 
 
 	cd ACE
 
-	$ACE_ROOT/bin/mwc.pl mACE.mwc -type gnuace
-	make all
+	#$ACE_ROOT/bin/mwc.pl mACE.mwc -type gnuace
+	#make all
 
 	#exiting ACE
 	cd ..
@@ -40,7 +47,7 @@
 
 	$ACE_ROOT/bin/mwc.pl rTAO.mwc -type gnuace
 
-	make all
+	make clean all
 	#exiting TAO
 	cd ..
 	

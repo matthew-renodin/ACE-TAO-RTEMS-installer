@@ -3,6 +3,12 @@
 //#define ACE_HAS_POSIX_TIME
 //#define ACE_LACKS_NETWORKING
 //#define ACE_HAS_SOCKLEN_T
+
+// There's no host table, by default. So using "localhost" won't work.
+// If your system does have the ability to use "localhost" and you want to,
+// define it before including this file.
+
+#define ACE_LOCALHOST "127.0.0.1"
 #define ACE_LACKS_SBRK
 #define ACE_LACKS_TIMESPEC_T
 #define ACE_HAS_UALARM
