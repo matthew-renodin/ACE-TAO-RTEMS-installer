@@ -28,7 +28,7 @@ pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchai
 
 python -v should be 2.7.15
 
-TEST for python:
+### TEST for python:
 
 python -c "import hashlib;m=hashlib.md5();print(m.hexdigest())"
 
