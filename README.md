@@ -6,9 +6,17 @@ You will need to build RTEMS under MINGW first. You must build RTEMS under the M
 
 You may run into issues trying to compile RTEMS under the MINGW32. 
 
+Also, you may run into issues if you have Python 3 installed in Windows. You need to ensure that you MINGW is executing the correct Python.
+
 ## Important steps for setting up MINGW
 
 These are required to compile ACE and TAO for RTEMS under MINGW64.
+
+You will want to use a MINGW with GCC 7.3.5. It may work on another version, but the GCC 10 version, as of 6/9/2020, exits due to an multiple defintion error when building the RSB. 
+
+### Use this MSYS2 that has MINGW:
+
+http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe
 
 pacman -S python mingw-w64-x86_64-python2 mingw-w64-x86_64-gcc bison cvs diffutils git make patch tar texinfo unzip
 
@@ -17,6 +25,13 @@ pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchai
 
 
 ## Build RTEMS
+
+python -v should be 2.7.15
+
+TEST for python:
+
+python -c "import hashlib;m=hashlib.md5();print(m.hexdigest())"
+
 
 cd /opt
 
