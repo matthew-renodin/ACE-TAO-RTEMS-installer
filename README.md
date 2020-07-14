@@ -43,6 +43,8 @@ cd rsb
 
 cd rtems  
 
+../source-builder/sb-set-builder --prefix=C:/msys64/opt/rtems5/tools 5/rtems-arm
+
 ../source-builder/sb-set-builder --prefix=/opt/rtems/tools 5/rtems-arm 
 
 
