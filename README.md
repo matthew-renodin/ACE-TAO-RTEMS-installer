@@ -43,16 +43,19 @@ cd rsb
 
 cd rtems  
 
+You could try the following 2 things:
+
 ../source-builder/sb-set-builder --prefix=C:/msys64/opt/rtems5/tools 5/rtems-arm
 
-../source-builder/sb-set-builder --prefix=/opt/rtems/tools 5/rtems-arm 
+or 
+
+../source-builder/sb-set-builder --prefix=/opt/rtems5/tools 5/rtems-arm 
 
 
+export PATH=/opt/rtems5/tools/bin:$PATH
 
 
-export PATH=/opt/rtems/tools/bin:$PATH
-
-
+mkdir rtems
 
 cd /opt/rtems
 
