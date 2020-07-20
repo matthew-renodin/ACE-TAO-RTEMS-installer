@@ -55,7 +55,7 @@ or
 export PATH=/opt/rtems5/tools/bin:$PATH
 
 
-mkdir rtems
+mkdir /opt/rtems
 
 cd /opt/rtems
 
