@@ -91,5 +91,13 @@ iai_main(void)
 #define RTEMS_BSD_CONFIG_FIREWALL_PFLOG
 #define CONFIGURE_MAXIMUM_DRIVERS 32
 
+//
+// filesystem
+//
+
+#define CONFIGURE_USE_IMFS_AS_BASE_FILESYSTEM
+#define CONFIGURE_MAXIMUM_FILE_DESCRIPTORS 40 
+#define CONFIGURE_IMFS_MEMFILE_BYTES_PER_BLOCK 512
+
 #include <waf/default-network-init.h>
 

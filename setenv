@@ -1,17 +1,19 @@
 
-export PROJECT_ROOT=/home/matthew/projects/zynq706
+export PROJECT_ROOT=/data/sandbox
 export ACE_ROOT=${PWD}/ACE_TAO/ACE
 export TAO_ROOT=${PWD}/ACE_TAO/TAO
 export MPC_ROOT=${PWD}/MPC
-export RTEMS_KERNEL=${PROJECT_ROOT}/kernel
+export RTEMS_KERNEL=${PROJECT_ROOT}/rtems
 export WAF_PATH=${PROJECT_ROOT}/rtems-libbsd
-export RTEMS_MAKEFILE_PATH=${PROJECT_ROOT}/xilinx-zynq/arm-rtems5/c/xilinx_zynq_zc706
-export RTEMS_PATH=/opt/rtems/bsp/arm-rtems5
-export RTEMS_TOOLS=/opt/rtems/tools
-export PATH=/mingw32/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rtems/tools/bin:/mingw64/bin
-export HOST_ACE_ROOT=${PROJECT_ROOT}/ACE-TAO-mingw-installer/ACE_TAO/ACE
+export RTEMS_MAKEFILE_PATH=${PROJECT_ROOT}/b-xilinx_zynq_a9_qemu/arm-rtems5/c/xilinx_zynq_a9_qemu
+export RTEMS_PATH=${RTEMS_KERNEL}/5/arm-rtems5
+export RTEMS_TOOLS=${PROJECT_ROOT}/rtems/5/bin
+#export PATH=/mingw32/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/rtems/tools/bin:/mingw64/bin
+export HOST_ACE_ROOT=${PROJECT_ROOT}/ACE-TAO-linux-installer/ACE_TAO/ACE
 export LD_LIBRARY_PATH=/lib:${HOST_ACE_ROOT}/lib/
 export BSP=xilinx-zynq
 export ARCH=arm
-
+export PATH=${RTEMS_TOOLS}:${HOST_ACE_ROOT}/bin:$PATH
+export CATCH2_ROOT=${PROJECT_ROOT}/Catch2
+export CEREAL_ROOT=${PROJECT_ROOT}/cereal
 

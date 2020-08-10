@@ -13,7 +13,7 @@ static_libs = 1
 rwho = 0
 
 ifneq (,$(HOST_ROOT))
-  TAO_IDL = $(HOST_ROOT)/bin/tao_idl_helper
+  TAO_IDL = $(HOST_ROOT)/bin/tao_idl
   TAO_IDL3_TO_IDL2 = $(HOST_ROOT)/bin/tao_idl3_to_idl2
   TAO_IDL_DEP = $(TAO_IDL)
   TAO_IDL3_TO_IDL2_DEP = $(TAO_IDL3_TO_IDL2)
@@ -118,15 +118,15 @@ CPPFLAGS += -I$(WAF_PATH)/mDNSResponder/mDNSCore
 CPPFLAGS += -I$(WAF_PATH)/mDNSResponder/mDNSShared 
 CPPFLAGS += -I$(WAF_PATH)/mDNSResponder/mDNSPosix 
 CPPFLAGS += -I$(ACE_ROOT)/waf 
-CPPFLAGS += -I$(WAF_PATH)/build/arm-rtems5-xilinx_zynq_zc706-everything/build-include/
+CPPFLAGS += -I$(WAF_PATH)/build/arm-rtems5-xilinx_zynq_a9_qemu-everything/build-include/
 CPPFLAGS += -DHAVE_DLFCN_H=1 -DHAVE_RTEMS_PCI_H=1 -DHAVE_RTEMS_RTEMS_DEBUGGER_H=1
 
 
 CPPFLAGS	+= -I"$(RTEMS_TOOLS)/arm-rtems5/include" -I"$(RTEMS_PATH)/include/" -I"$(RTEMS_KERNEL)/cpukit/include/" -I"$(RTEMS_KERNEL)/cpukit/libfs/src/jffs2/include/" -I"$(RTEMS_KERNEL)/cpukit/libnetworking" -I"$(RTEMS_KERNEL)/bsps/$(ARCH)/$(BSP)/include/" -I"$(RTEMS_MAKEFILE_PATH)/lib/libbsp/$(ARCH)/$(BSP)/include/" -I"$(RTEMS_KERNEL)/cpukit/score/cpu/$(ARCH)/include/" -I"$(RTEMS_MAKEFILE_PATH)/include/" -I"$(RTEMS_KERNEL)/bsps/include/" -I"$(RTEMS_KERNEL)/bsps/$(ARCH)/include/" -I"$(RTEMS_KERNEL)/cpukit/include/rtems/"
 LD              = $(CXX)
 OCFLAGS         += -O0
-LDFLAGS += -L$(RTEMS_PATH)/xilinx_zynq_zc706/lib/ -L$(RTEMS_MAKEFILE_PATH)/cpukit/ -L"$(RTEMS_KERNEL)/cpukit" -L"$(RTEMS_KERNEL)/../bsps/$(ARCH)/shared/start" -L. -L../../../lib  
-LIBS += $(RTEMS_PATH)/xilinx_zynq_zc706/lib/libbsd.a -Wl,-Bdynamic -lftpd -ltelnetd -lbsd -lm -lz $(RTEMS_MAKEFILE_PATH)/cpukit/librtemstest.a $(RTEMS_MAKEFILE_PATH)/cpukit/librtemscpu.a $(RTEMS_MAKEFILE_PATH)/lib/libbsp/$(ARCH)/$(BSP)/librtemsbsp.a $(RTEMS_MAKEFILE_PATH)/cpukit/librtemsdefaultconfig.a
+LDFLAGS += -L$(RTEMS_PATH)/xilinx_zynq_a9_qemu/lib/ -L$(RTEMS_MAKEFILE_PATH)/cpukit/ -L"$(RTEMS_KERNEL)/cpukit" -L"$(RTEMS_KERNEL)/../bsps/$(ARCH)/shared/start" -L. -L../../../lib  
+LIBS += $(RTEMS_PATH)/xilinx_zynq_a9_qemu/lib/libbsd.a -Wl,-Bdynamic -lftpd -ltelnetd -lbsd -lm -lz $(RTEMS_MAKEFILE_PATH)/cpukit/librtemstest.a $(RTEMS_MAKEFILE_PATH)/cpukit/librtemscpu.a $(RTEMS_MAKEFILE_PATH)/lib/libbsp/$(ARCH)/$(BSP)/librtemsbsp.a $(RTEMS_MAKEFILE_PATH)/cpukit/librtemsdefaultconfig.a
 
 include $(ACE_ROOT)/include/makeinclude/platform_g++_common.GNU
 
