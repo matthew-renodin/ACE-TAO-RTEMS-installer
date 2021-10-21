@@ -6,7 +6,7 @@ You will need to build RTEMS under MINGW first. You must build RTEMS under the M
 
 You may run into issues trying to compile RTEMS under the MINGW32. 
 
-Also, you may run into issues if you have Python 3 installed in Windows. You need to ensure that you MINGW is executing the correct Python.
+Also, you may run into issues if you have Python 3 installed in Windows. You need to ensure that your MINGW is executing the correct Python.
 
 ## Important steps for setting up MINGW
 
@@ -109,6 +109,9 @@ cd ACE-TAO-RTEMS-installer
     2. platform_macros.GNU
     
 3. In the ACE-TAO-mingw-installer project the tao_idl.exe needs to be moved to mtao_idl. Then copy the tao_idl_helper as tao_idl to the ACE-TAO-mingw-installer project. There is an issue with exe requiring DLLs in thecurrent working directory. There is likely a fix for this issue, but it needs to be dealt with in the ACE TAO project. Also, I tried using the platform_macros.GNU but it did not execute the program I specified as expected. I am likley using the wrong variable.
+    
+### Notes:
+*I made the helper because I misunderstood that MINGW uses the PATH variable for the DLLs
     
 4. Once you have accomplished the previous steps and have reviewed the files, execute the ace-tao--rtems-install.sh
 
