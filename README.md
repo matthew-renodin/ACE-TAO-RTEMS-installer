@@ -16,6 +16,7 @@ You will want to use a MINGW with GCC 7.3.5. It may work on another version, but
 
 ### Use this MSYS2 that has MINGW:
 
+This version is no longer available on the site.
 http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe
 
 pacman -S python mingw-w64-x86_64-python2 mingw-w64-x86_64-gcc bison cvs diffutils git make patch tar texinfo unzip
